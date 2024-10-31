@@ -1,21 +1,44 @@
-import React from 'react';
+import { FaHome, FaLaptopCode, FaNewspaper } from 'react-icons/fa'
 
-const Sidebar: React.FC = () => {
-  return (
-    <nav className="bg-gray-200 h-full p-4 w-64 shadow-lg">
-      <ul className="space-y-2">
-        <li>
-          <a href="/" className="block py-2 px-4 hover:bg-blue-500 hover:text-white transition rounded">Home</a>
-        </li>
-        <li>
-          <a href="about" className="block py-2 px-4 hover:bg-blue-500 hover:text-white transition rounded">About</a>
-        </li>        
-        <li>
-          <a href="#contact" className="block py-2 px-4 hover:bg-blue-500 hover:text-white transition rounded">Contact</a>
-        </li>
-      </ul>
-    </nav>
-  );
-};
+const Sidebar = () => {
+    return (
+        <nav className="flex flex-col justify-start p-5 rounded-lg bg-light-gray shadow-lg">
+            <ul className="space-y-2">
+                <li className="pt-1">
+                    <a
+                        href="/"
+                        className="flex justify-center hover:bg-green hover:text-light-gray transition rounded m-1 p-1"
+                    >
+                        <FaHome />
+                    </a>
+                </li>
+                <li className="pt-1">
+                    <a
+                        href="about"
+                        className="flex justify-center hover:bg-green hover:text-light-gray transition rounded m-1 p-1  text-center"
+                    >
+                        <FaLaptopCode />
+                    </a>
+                </li>
+                <li className="pt-1">
+                    <a
+                        href="blog"
+                        className="flex justify-center hover:bg-green hover:text-light-gray transition rounded m-1 p-1 text-center"
+                    >
+                        <FaNewspaper />
+                    </a>
+                </li>
+                {/* <li className="pt-1">
+                    <a
+                        href="contact"
+                        className="block hover:bg-green hover:text-light-gray transition rounded m-1 p-1  text-center"
+                    >
+                        Projects?
+                    </a>
+                </li> */}
+            </ul>
+        </nav>
+    )
+}
 
-export default Sidebar;
+export default Sidebar
