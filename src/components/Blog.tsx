@@ -40,9 +40,9 @@ const Blog = () => {
                                 <img
                                     src={post.image}
                                     alt={post.title}
-                                    className="group-h over:-translate-y-full h-full w-full transform object-cover transition-transform duration-300"
+                                    className="group-h h-full w-full transform object-cover duration-300 group-hover:-translate-y-full"
                                 />
-                                <h2 className="absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center bg-black bg-opacity-50 text-center text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                <h2 className="absolute flex items-center justify-center bg-black bg-opacity-50 text-center text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                                     {post.title}
                                 </h2>
                             </div>
