@@ -23,10 +23,10 @@ const router = createBrowserRouter([
 
 const App = () => {
     return (
-        <div className="flex flex-1 m-5">
+        <div className="m-5 flex flex-1">
             <Sidebar />
-            <div className="flex justify-center w-full">
-                <div className="flex flex-col h-screen">
+            <div className="flex w-full justify-center">
+                <div className="flex h-screen flex-col">
                     <Header />
                     <RouterProvider router={router} />
                 </div>

@@ -26,23 +26,23 @@ const Blog = () => {
 
     return (
         <div className="p-20">
-            <h1 className="text-3xl font-bold text-center text-navy mb-5">
+            <h1 className="mb-5 text-center text-3xl font-bold text-navy">
                 Blog
             </h1>
             <div className="flex flex-col">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
                     {blogPosts.map((post) => (
                         <div
                             key={post.id}
-                            className="overflow-hidden shadow-lg group rounded-lg relative"
+                            className="group relative overflow-hidden rounded-lg shadow-lg"
                         >
-                            <div className="flex justify-center items-center h-48 overflow-hidden">
+                            <div className="flex h-48 items-center justify-center overflow-hidden">
                                 <img
                                     src={post.image}
                                     alt={post.title}
-                                    className="w-full h-full object-cover transition-transform duration-300 transform group-hover:-translate-y-full"
+                                    className="group-h over:-translate-y-full h-full w-full transform object-cover transition-transform duration-300"
                                 />
-                                <h2 className="absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white bg-black bg-opacity-50">
+                                <h2 className="absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center bg-black bg-opacity-50 text-center text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                                     {post.title}
                                 </h2>
                             </div>

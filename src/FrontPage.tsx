@@ -1,8 +1,8 @@
 const FrontPage = () => {
     return (
-        <div className="flex flex-1 ">
-            <main className="flex-1 p-8 flex flex-col  items-center">
-                <p className="max-w-2xl text-lg text-center leading-relaxed">
+        <div className="flex flex-1">
+            <main className="flex flex-1 flex-col items-center p-8">
+                <p className="max-w-2xl text-center text-lg leading-relaxed">
                     Hi, I'm a Software Engineer specializing in backend
                     development and feature enhancement for internal
                     applications. With a focus on code quality and scalability,
@@ -14,7 +14,7 @@ const FrontPage = () => {
                 </p>
             </main>
         </div>
-    )
+    ) 
 }
 
 export default FrontPage

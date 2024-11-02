@@ -3,8 +3,8 @@ import React from 'react'
 
 const About: React.FC = () => {
     return (
-        <div className="p-8 max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-navy mb-4">About Me</h2>
+        <div className="mx-auto max-w-3xl p-8 text-center">
+            <h2 className="mb-4 text-3xl font-bold text-navy">About Me</h2>
             <p className="text-lg leading-relaxed">
                 Hello! I'm a Software Engineer with a strong focus on backend
                 development and internal applications. I have experience in
