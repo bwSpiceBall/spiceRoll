@@ -1,11 +1,9 @@
-import React from 'react';
+const Header = () => {
+    return (
+        <header className="flex justify-center">
+            <h1 className="text-center text-3xl text-navy">Spice Roll</h1>
+        </header>
+    )
+}
 
-const Header: React.FC = () => {
-  return (
-    <header className="bg-blue-600 text-white p-8">
-      <h1 className="text-4xl font-bold text-center">Spice Blog.</h1>
-    </header>
-  );
-};
-
-export default Header;
+export default Header
