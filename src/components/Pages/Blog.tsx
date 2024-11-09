@@ -1,6 +1,6 @@
-import helmetLogo from '../assets/helmetjs.png'
-import debian from '../assets/debian.png'
-import cicd from '../assets/cicd.png'
+import helmetLogo from '../../assets/helmetjs.png'
+import debian from '../../assets/debian.png'
+import cicd from '../../assets/cicd.png'
 import { useState } from 'react'
 
 const Blog = () => {

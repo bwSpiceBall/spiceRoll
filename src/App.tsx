@@ -1,10 +1,10 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-import About from './About'
-import FrontPage from './FrontPage'
+import About from './components/pages/About'
+import FrontPage from './components/pages/FrontPage'
 import Header from './components/Header'
 import Sidebar from './components/Sidebar'
-import Blog from './components/Blog'
+import Blog from './components/pages/Blog'
 
 const router = createBrowserRouter([
     {
