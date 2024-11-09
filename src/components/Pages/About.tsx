@@ -1,7 +1,4 @@
-// src/pages/About.tsx
-import React from 'react'
-
-const About: React.FC = () => {
+const About = () => {
     return (
         <div className="mx-auto max-w-3xl p-8 text-center">
             <h2 className="mb-4 text-3xl font-bold text-navy">About Me</h2>

@@ -1,25 +1,40 @@
-const provisionalBlogPost = [
-    {
-        title: 'Understanding React Hooks',
-        slug: 'understanding-react-hooks',
-        image_path: '/images/react-hooks.png',
-        excerpt:
-            'A comprehensive guide to understanding and using React Hooks in your applications.',
-        last_modified_date: '2023-10-01',
-    },
-]
+import { useQuery } from '@tanstack/react-query'
+import DOMPurify from 'dompurify'
+import { useParams } from 'react-router-dom'
 
 const BlogPost = () => {
+    const { blogId } = useParams()
+    const { isPending, error, data } = useQuery({
+        queryKey: ['http://localhost:8080/api', { blogId }],
+        queryFn: async () => {
+            const response = await fetch(
+                `http://localhost:8080/api/content/item/blog/${blogId}`
+            )
+            return await response.json()
+        },
+    })
+    if (isPending) return 'loading'
+    if (error) return 'An error has occurred: ' + error.message
+
+    const clean = data && data ? DOMPurify.sanitize(data.content) : ''
+
     return (
-        <div>
-            {provisionalBlogPost.map((post) => (
-                <>
-                    <h1>{post.title}</h1>
-                    <img src={post.image_path} alt={post.title} />
-                    <p>{post.excerpt}</p>
-                    <p>Last modified: {post.last_modified_date}</p>
-                </>
-            ))}
+        <div className="flex items-center overflow-auto bg-black bg-opacity-50">
+            <div className="relative max-w-screen-lg rounded-lg bg-white p-8 shadow-lg">
+                <div className="">
+                    <h2 className="mb-2 text-2xl font-bold">{data.title}</h2>
+                    <div className="">
+                        <span
+                            dangerouslySetInnerHTML={{
+                                __html: clean,
+                            }}
+                        />
+                    </div>
+                    <p className="mb-4 text-sm text-gray-500">
+                        Last modified: {data.last_modified_date}
+                    </p>
+                </div>
+            </div>
         </div>
     )
 }
