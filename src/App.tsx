@@ -1,9 +1,8 @@
 import { Route, Routes } from 'react-router-dom'
-
-import About from './components/pages/About'
-import FrontPage from './components/pages/FrontPage'
-import Header from './components/Header'
 import Sidebar from './components/Sidebar'
+import Header from './components/Header'
+import FrontPage from './components/pages/FrontPage'
+import About from './components/pages/About'
 import Blog from './components/pages/Blog'
 import BlogPost from './components/pages/BlogPost'
 
