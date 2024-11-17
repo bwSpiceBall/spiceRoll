@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom'
 
 const Sidebar = () => {
     return (
-        <nav className="flex justify-start rounded-lg bg-light-gray p-5 shadow-lg">
+        <div className="flex justify-start rounded-lg bg-light-gray p-5 shadow-lg">
             <ul className="space-y-2">
                 <li className="relative pt-1">
                     <NavLink
@@ -41,7 +41,7 @@ const Sidebar = () => {
                     </NavLink>
                 </li>
             </ul>
-        </nav>
+        </div>
     )
 }
 
