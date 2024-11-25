@@ -20,14 +20,14 @@ const router = [
         element: <Blog />,
     },
     {
-        path: '/blog/:blogId',
+        path: '/blog/:documentId',
         element: <BlogPost />,
     },
 ]
 
 const App = () => {
     return (
-        <div className="m-5 flex flex-1">
+        <div className="ml-5 mt-5 flex flex-1">
             <Sidebar />
             <div className="flex w-full justify-center">
                 <div className="flex h-screen flex-col">

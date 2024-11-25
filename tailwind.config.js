@@ -1,19 +1,18 @@
-module.exports = {
+export default {
     content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
     theme: {
         extend: {
             colors: {
-                green: '#A8E6CF',
-                lime: '#DCEDC1',
+                // green: '#A8E6CF',
+                // lime: '#DCEDC1',
                 peach: '#FFDDC1',
-                pink: '#FFABAB',
-                rose: '#FF8B94',
+                // pink: '#FFABAB',
+                // rose: '#FF8B94',
                 white: '#FFFFFF',
                 'light-gray': '#F4F5F6',
-                teal: '#02E3A7',
+                // teal: '#02E3A7',
                 navy: '#13144D',
-                green: '#6AF15C',
-                blue: '#103CF6',
+                // blue: '#103CF6',
             },
         },
     },
