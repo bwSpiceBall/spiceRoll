@@ -1,10 +1,10 @@
 import { Route, Routes } from 'react-router-dom'
 import Sidebar from './components/Sidebar'
 import Header from './components/Header'
-import FrontPage from './components/pages/FrontPage'
-import About from './components/pages/About'
-import Blog from './components/pages/Blog'
-import BlogPost from './components/pages/BlogPost'
+import FrontPage from './components/Pages/FrontPage'
+import About from './components/Pages/About'
+import Blog from './components/Pages/Blog'
+import BlogPost from './components/Pages/BlogPost'
 
 const router = [
     {
