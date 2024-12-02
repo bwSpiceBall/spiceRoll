@@ -1,6 +1,8 @@
 name: Deploy to Docker Hub and Server
 
 on:
+    pull_request:
+      branches: [main, test-deployment]
     push:
         branches:
             -main
