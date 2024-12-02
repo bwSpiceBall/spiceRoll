@@ -5,10 +5,10 @@ import { useParams } from 'react-router-dom'
 const BlogPost = () => {
     const { documentId } = useParams()
     const { isPending, data: response } = useQuery({
-        queryKey: ['http://localhost:1337/api/posts', { documentId }],
+        queryKey: [`${import.meta.env.VITE_CMS_URL}/api/posts`, { documentId }],
         queryFn: async () => {
             const response = await fetch(
-                `http://localhost:1337/api/posts/?filters[documentId][$eq]=${documentId}`
+                `${import.meta.env.VITE_CMS_URL}/api/posts/?filters[documentId][$eq]=${documentId}`
             )
             return await response.json()
         },

@@ -9,6 +9,10 @@ jobs:
     build-and-deploy:
         runs-on: ubuntu-latest
 
+        env: 
+          VITE_CMS_TOKEN: ${{ secrets.VITE_CMS_TOKEN }}
+          VITE_CMS_URL: ${{ secrets.VITE_CMS_URL }}
+
         steps:
             - name: Checkout code
               uses: actions/checkout@v2
@@ -35,6 +39,5 @@ jobs:
                 username: ${{ secrets.SERVER_USER }}
                 key: ${{ secrets.SERVER_SHH_KEY }}
                 script: | 
-                  cd /Users/tszpak/git/blog-site 
                   docker-compose pull 
                   docker-compose up -d
