@@ -2,7 +2,12 @@ services:
   server:
     build:
       context: .
+      args:
+        - VITE_CMS_TOKEN=${VITE_CMS_TOKEN}
+        - VITE_CMS_URL=${VITE_CMS_URL}
     environment:
-      NODE_ENV: production
+      - NODE_ENV=production
+      - VITE_CMS_TOKEN=${VITE_CMS_TOKEN}
+      - VITE_CMS_URL=${VITE_CMS_URL}
     ports:
       - 3001:3001
