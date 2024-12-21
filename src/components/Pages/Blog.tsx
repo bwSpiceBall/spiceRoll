@@ -33,7 +33,7 @@ const Blog = () => {
         queryKey: ['blogPosts'],
         queryFn: async () => {
             const response = await fetch(
-                `http://localhost:1337/api/posts/?populate=image&populate=secondary_image&fields=title,description`,
+                `${import.meta.env.VITE_CMS_URL}/api/posts/?populate=image&populate=secondary_image&fields=title,description`,
                 {
                     headers: {
                         Authorization: `Bearer: ${import.meta.env.VITE_CMS_TOKEN}`,
@@ -69,7 +69,7 @@ const Blog = () => {
                                     >
                                         <div className="flex h-48 items-center justify-center overflow-hidden">
                                             <img
-                                                src={`http://localhost:1337/${post.image[0].formats.small.url}`}
+                                                src={`${import.meta.env.VITE_CMS_URL}${post.image[0].formats.small.url}`}
                                                 alt={
                                                     post.image[0].formats.small
                                                         .name
@@ -77,7 +77,7 @@ const Blog = () => {
                                                 className="group-h z-10 h-full w-full transform object-cover duration-300 group-hover:-translate-y-full"
                                             />
                                             <img
-                                                src={`http://localhost:1337/${post.secondary_image[0].formats.small.url}`}
+                                                src={`${import.meta.env.VITE_CMS_URL}${post.secondary_image[0].formats.small.url}`}
                                                 alt={
                                                     post.secondary_image[0]
                                                         .formats.small.name
