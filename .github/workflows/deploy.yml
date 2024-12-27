@@ -1,14 +1,10 @@
 name: Deploy
 
 on:
-  pull_request:
-    branches: [main, prepare-for-deployment]
   push:
     branches:
       - main
-      
-  workflow_dispatch:
-
+    
 jobs: 
   build-and-deploy:
     runs-on: self-hosted
