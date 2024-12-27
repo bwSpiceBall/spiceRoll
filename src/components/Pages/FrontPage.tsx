@@ -3,7 +3,7 @@ const FrontPage = () => {
         <div className="flex flex-1">
             <main className="flex flex-1 flex-col items-center p-8">
                 <p className="max-w-2xl text-center text-lg leading-relaxed">
-                    Hi, I'm a Software Engineer specializing in backend
+                    Hi, I'm a Software Engineer specializing in full stack
                     development and feature enhancement for internal
                     applications. With a focus on code quality and scalability,
                     I help build and maintain robust solutions in an Agile
