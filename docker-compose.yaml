@@ -12,3 +12,4 @@ services:
       - VITE_CMS_URL=${VITE_CMS_URL}
     ports:
       - 3000:3000
+
