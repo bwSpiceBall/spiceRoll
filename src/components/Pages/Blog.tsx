@@ -37,7 +37,10 @@ const Blog = () => {
                 {
                     headers: {
                         Authorization: `Bearer: ${import.meta.env.VITE_CMS_TOKEN}`,
+                        'Content-Type': 'application/json',
                     },
+                    credentials: 'include',
+                    mode: 'cors',
                 }
             )
             return await response.json()
