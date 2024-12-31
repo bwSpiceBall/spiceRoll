@@ -13,23 +13,12 @@ export default defineConfig({
     },
     preview: {
         port: 8080,
-        strictPort: true,
-        cors: {
-            origin: 'http://localhost:8080',
-            methods: ['GET', 'POST'],
-            allowedHeaders: ['Content-Type', 'Authorization'],
-        }
+        strictPort: true
     },
     server: {
         port: 8080,
         strictPort: true,
         host: true,
-        origin: 'http://localhost:8080',
-        cors: {
-            origin: process.env.VITE_CMS_URL,
-            methods: ['GET', 'POST'],
-            allowedHeaders: ['Content-Type', 'Authorization'],
-            credentials: true
-        }
+        origin: 'http://localhost:8080'
     },
 })
