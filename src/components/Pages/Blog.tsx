@@ -23,8 +23,8 @@ export interface PostType {
     description: string
     last_modified_date: string
     documentId: string
-    image: [Image]
-    secondary_image: [Image]
+    image: Image
+    secondary_image: Image
     content: string | Node
 }
 
@@ -37,10 +37,8 @@ const Blog = () => {
                 {
                     headers: {
                         Authorization: `Bearer: ${import.meta.env.VITE_CMS_TOKEN}`,
-                        'Content-Type': 'application/json',
-                    },
-                    credentials: 'include',
-                    mode: 'cors',
+                      
+                    }
                 }
             )
             return await response.json()
@@ -72,17 +70,17 @@ const Blog = () => {
                                     >
                                         <div className="flex h-48 items-center justify-center overflow-hidden">
                                             <img
-                                                src={`${import.meta.env.VITE_CMS_URL}${post.image[0].formats.small.url}`}
+                                                src={`${import.meta.env.VITE_CMS_URL}${post.image.formats.small.url}`}
                                                 alt={
-                                                    post.image[0].formats.small
+                                                    post.image.formats.small
                                                         .name
                                                 }
                                                 className="group-h z-10 h-full w-full transform object-cover duration-300 group-hover:-translate-y-full"
                                             />
                                             <img
-                                                src={`${import.meta.env.VITE_CMS_URL}${post.secondary_image[0].formats.small.url}`}
+                                                src={`${import.meta.env.VITE_CMS_URL}${post.secondary_image.formats.small.url}`}
                                                 alt={
-                                                    post.secondary_image[0]
+                                                    post.secondary_image
                                                         .formats.small.name
                                                 }
                                                 className="group-h absolute left-0 top-0 z-0 h-full w-full scale-90 transform object-cover opacity-0 transition-opacity duration-1000 backdrop:filter group-hover:scale-100 group-hover:opacity-100"
