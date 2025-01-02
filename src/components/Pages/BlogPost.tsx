@@ -14,6 +14,7 @@ const BlogPost = () => {
         },
     })
     if (isPending) return 'loading'
+    
     const { data, error } = response
 
     if (error) return 'An error has occurred: ' + error.message
@@ -27,8 +28,8 @@ const BlogPost = () => {
     return (
         <div className="flex items-center">
             <div className="relative max-w-screen-lg rounded-lg bg-white p-8">
-                <div className="text-center">
-                    <h2 className="text-2xl font-bold">{blogPost.title}</h2>
+                <div className="">
+                    <h2 className="text-2xl text-center font-bold">{blogPost.title}</h2>
                     <br />
                     <span
                         dangerouslySetInnerHTML={{
