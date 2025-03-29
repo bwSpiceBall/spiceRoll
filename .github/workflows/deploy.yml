@@ -44,6 +44,7 @@ jobs:
           debug: true
           envs: VITE_CMS_TOKEN,VITE_CMS_URL
           script: | 
-            cd /docker/compose-files/spiceroll
+            cd /docker/spiceRoll
             docker compose pull
             docker compose up -d
+
