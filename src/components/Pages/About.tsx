@@ -18,6 +18,7 @@ const About = () => {
                 <br />
                 In my free time, I enjoy exploring new technologies, mentoring
                 others, and contributing to open-source projects.
+                Quick update
             </p>
         </div>
     )
