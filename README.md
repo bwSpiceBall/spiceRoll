@@ -1,5 +1,7 @@
 # Personal Site - React + TypeScript + Vite
 
+[![Tests Status](https://github.com/{your-github-username}/spiceroll/workflows/Run%20Tests/badge.svg)](https://github.com/{your-github-username}/spiceroll/actions)
+
 This repository contains the codebase for my personal site, built using React, TypeScript, and Vite. The setup includes hot module replacement (HMR) and ESLint for code quality.
 
 ## Project Structure
@@ -83,6 +85,30 @@ npm run lint
 # or
 yarn lint
 ```
+
+### Testing
+
+This project uses Vitest for unit testing. To run the tests:
+
+```sh
+# Run tests once
+npm test
+
+# Run tests in watch mode (for development)
+npm run test:watch
+
+# Generate test coverage report
+npm run test:coverage
+```
+
+## Continuous Integration
+
+This project uses GitHub Actions for continuous integration. The following checks run automatically on pull requests:
+
+- Unit tests
+- Test coverage reporting to Codecov
+
+You can view the status of these checks in the GitHub Actions tab of the repository.
 
 ## Expanding the ESLint Configuration
 
