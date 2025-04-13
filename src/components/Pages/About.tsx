@@ -3,7 +3,7 @@ const About = () => {
         <div className="mx-auto max-w-3xl p-8 text-center">
             <h2 className="mb-4 text-3xl font-bold text-navy">About Me</h2>
             <p className="text-lg leading-relaxed">
-                Hello! I'm a Software Engineer with a strong focus on full stack
+                Hello! I&apos;m a Software Engineer with a strong focus on full stack
                 development and internal applications. I have experience in
                 designing scalable, maintainable solutions and a deep
                 understanding of Agile methodologies.
