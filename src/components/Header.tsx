@@ -28,9 +28,11 @@ const Header: FC<HeaderProps> = ({ isMobile = false, toggleMobileMenu }) => {
                         </button>
                     </>
                 ) : (
-                    <h1 className="w-full text-center text-3xl font-bold text-navy">
-                        Spice Roll
-                    </h1>
+                    <div className="flex w-full items-center justify-start pl-4">
+                        <h1 className="text-3xl font-bold text-navy">
+                            Spice Roll
+                        </h1>
+                    </div>
                 )}
             </div>
         </header>
