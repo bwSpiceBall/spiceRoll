@@ -1,7 +1,8 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest'
-import { render, screen } from '@testing-library/react'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { MemoryRouter, Routes, Route } from 'react-router-dom'
+import { render, screen } from '@testing-library/react'
+import { MemoryRouter, Route, Routes } from 'react-router-dom'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
+
 import BlogPost from '../BlogPost'
 
 // Mock DOMPurify
@@ -22,7 +23,7 @@ vi.mock('import.meta', () => ({
 vi.mock('react-router-dom', async () => {
   const actual = await vi.importActual('react-router-dom')
   return {
-    ...actual as any,
+    ...actual as typeof import('react-router-dom'),
     useParams: () => ({
       documentId: 'test-id-123'
     })
