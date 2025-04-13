@@ -100,7 +100,7 @@ describe('App Component', () => {
     await user.click(menuButton)
     
     // The mobile menu should now be visible
-    const closeButton = screen.getByText((content, element) => {
+    const closeButton = screen.getByText((_, element) => {
       return element?.tagName.toLowerCase() === 'path' && element.getAttribute('d') === 'M6 18L18 6M6 6l12 12'
     })
     expect(closeButton).toBeInTheDocument()
@@ -137,7 +137,7 @@ describe('App Component', () => {
     await waitFor(() => {
       expect(screen.getByTestId('about')).toBeInTheDocument()
       // The close button should no longer be in the document
-      const closeButton = screen.queryByText((content, element) => {
+      const closeButton = screen.queryByText((_, element) => {
         return element?.tagName.toLowerCase() === 'path' && element.getAttribute('d') === 'M6 18L18 6M6 6l12 12'
       })
       expect(closeButton).not.toBeInTheDocument()
