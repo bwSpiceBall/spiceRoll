@@ -1,4 +1,4 @@
-name: Run Tests
+name: Run Tests and Lint
 
 on:
   pull_request:
@@ -7,7 +7,7 @@ on:
     branches: [ main, master ]
 
 jobs:
-  test:
+  lint-and-test:
     runs-on: self-hosted
 
     steps:
@@ -22,7 +22,10 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-
+        
+      - name: Run ESLint
+        run: npm run lint
+        
       - name: Run tests
         run: npm test
 
