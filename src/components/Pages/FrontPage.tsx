@@ -11,7 +11,7 @@ const FrontPage = () => {
                 <div className="mb-10 h-1 w-16 bg-primary mx-auto"></div>
                 
                 <p className="max-w-2xl text-center text-lg text-light-100 leading-relaxed">
-                    Hi, I'm a Software Engineer focusing on full stack development with a passion for
+                    Hi, I&apos;m a Software Engineer focusing on full stack development with a passion for
                     excellent user experiences. I specialize in building scalable, maintainable
                     applications with a strong emphasis on code quality and scalability.
                     <br /><br />

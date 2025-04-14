@@ -5,8 +5,8 @@ const About = () => {
                 <h1 className="text-3xl font-bold text-light mb-6">About Me</h1>
                 <div className="space-y-4">
                     <p className="text-light-100">
-                        I'm a software engineer with expertise in building modern, responsive web applications. 
-                        With over 8 years of experience in the field, I've worked on a variety of projects 
+                        I&apos;m a software engineer with expertise in building modern, responsive web applications. 
+                        With over 8 years of experience in the field, I&aposve worked on a variety of projects 
                         ranging from small business websites to complex enterprise applications.
                     </p>
                     <p className="text-light-100">
