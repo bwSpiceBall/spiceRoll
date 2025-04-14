@@ -28,23 +28,3 @@ jobs:
         
       - name: Run tests
         run: npm test
-
-      - name: Run tests with coverage
-        run: npm run test:coverage
-        
-      - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v3
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          directory: ./coverage/
-          fail_ci_if_error: false
-          flags: unittests
-          name: spiceroll-coverage
-          verbose: true
-        
-      - name: Upload coverage reports as artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: coverage-report
-          path: coverage/
-          retention-days: 7
