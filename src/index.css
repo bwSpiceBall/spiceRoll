@@ -83,3 +83,28 @@ a:focus, button:focus, input:focus, textarea:focus {
   outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
+
+/* Add responsive blog content styles */
+.blog-content {
+  @apply w-full overflow-hidden;
+}
+
+.blog-content img {
+  @apply max-w-full h-auto mx-auto my-4 rounded-lg;
+}
+
+.blog-content pre {
+  @apply overflow-x-auto my-4 text-sm md:text-base;
+}
+
+.blog-content iframe {
+  @apply w-full max-w-full my-4;
+}
+
+.blog-content table {
+  @apply w-full overflow-x-auto block md:table my-4 border-collapse;
+}
+
+.blog-content blockquote {
+  @apply border-l-4 border-gray-300 pl-4 italic my-4;
+}
