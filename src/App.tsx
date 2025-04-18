@@ -35,7 +35,7 @@ const App = () => {
     }
 
     return (
-        <div className="min-h-screen bg-gray-50">
+        <div className="min-h-screen bg-dark text-light">
             {/* Mobile Header with hamburger menu */}
             <div className="lg:hidden">
                 <Header isMobile={true} toggleMobileMenu={toggleMobileMenu} />
@@ -43,11 +43,11 @@ const App = () => {
 
             {/* Mobile Menu Overlay */}
             {isMobileMenuOpen && (
-                <div className="fixed inset-0 z-40 bg-white lg:hidden">
+                <div className="fixed inset-0 z-40 bg-dark-100 lg:hidden">
                     <div className="flex justify-end p-4">
                         <button 
                             onClick={toggleMobileMenu}
-                            className="text-gray-600 focus:outline-none"
+                            className="text-light focus:outline-none"
                         >
                             <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />

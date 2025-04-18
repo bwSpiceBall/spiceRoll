@@ -99,11 +99,17 @@ describe('App Component', () => {
     const menuButton = screen.getByLabelText('Open menu')
     await user.click(menuButton)
     
-    // The mobile menu should now be visible
-    const closeButton = screen.getByText((_, element) => {
-      return element?.tagName.toLowerCase() === 'path' && element.getAttribute('d') === 'M6 18L18 6M6 6l12 12'
-    })
+    // The mobile menu should now be visible with dark theme
+    // Use a more direct approach by finding the button containing the SVG
+    const closeButton = document.querySelector('button > svg > path[d="M6 18L18 6M6 6l12 12"]')?.closest('button')
     expect(closeButton).toBeInTheDocument()
+    
+    // Check that the mobile menu is visible - use getAllByRole to avoid the multiple element error
+    const mobileMenus = screen.getAllByRole('navigation', { name: '' })
+    // Find the mobile menu (the one within the fixed div)
+    const mobileMenu = mobileMenus.find(nav => nav.closest('.fixed.inset-0.z-40.bg-dark-100'))
+    expect(mobileMenu).toBeInTheDocument()
+    expect(mobileMenu?.closest('.bg-dark-100')).toBeInTheDocument()
     
     // Check that sidebar links are visible in the mobile menu
     expect(screen.getAllByText('Home').length).toBeGreaterThan(0)
@@ -142,5 +148,12 @@ describe('App Component', () => {
       })
       expect(closeButton).not.toBeInTheDocument()
     })
+  })
+  
+  it('renders with dark theme classes', () => {
+    renderWithRouter(<App />)
+    const appContainer = screen.getByTestId('frontpage').closest('.bg-dark')
+    expect(appContainer).toBeInTheDocument()
+    expect(appContainer).toHaveClass('text-light')
   })
 })

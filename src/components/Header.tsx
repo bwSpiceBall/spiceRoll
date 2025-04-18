@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC } from 'react';
 
 interface HeaderProps {
     isMobile?: boolean;
@@ -7,14 +7,14 @@ interface HeaderProps {
 
 const Header: FC<HeaderProps> = ({ isMobile = false, toggleMobileMenu }) => {
     return (
-        <header className="border-b border-gray-200 py-4">
+        <header className="border-b border-dark-400 py-4">
             <div className="flex items-center justify-between">
                 {isMobile ? (
                     <>
-                        <h1 className="text-2xl font-bold text-navy">Spice Roll</h1>
+                        <h1 className="text-2xl font-bold text-primary">Spice Roll</h1>
                         <button 
                             onClick={toggleMobileMenu}
-                            className="text-gray-600 focus:outline-none"
+                            className="text-light focus:outline-none hover:text-primary transition-colors"
                             aria-label="Open menu"
                         >
                             <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -29,7 +29,7 @@ const Header: FC<HeaderProps> = ({ isMobile = false, toggleMobileMenu }) => {
                     </>
                 ) : (
                     <div className="flex w-full items-center justify-start pl-4">
-                        <h1 className="text-3xl font-bold text-navy">
+                        <h1 className="text-3xl font-bold text-primary">
                             Spice Roll
                         </h1>
                     </div>
