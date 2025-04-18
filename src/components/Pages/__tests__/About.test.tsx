@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import { describe, it, expect } from 'vitest'
+import { describe, expect, it } from 'vitest'
 
 import About from '../About'
 
@@ -8,32 +8,53 @@ describe('About Component', () => {
     render(<About />)
     
     // Check that the heading is rendered with correct text
-    const heading = screen.getByRole('heading', { level: 2 })
-    expect(heading).toHaveTextContent('About Me')
+    const heading = screen.getByText('About Me')
+    expect(heading).toBeInTheDocument()
     expect(heading).toHaveClass('text-3xl')
     expect(heading).toHaveClass('font-bold')
-    expect(heading).toHaveClass('text-navy')
+    expect(heading).toHaveClass('text-light')
+    expect(heading).toHaveClass('mb-6')
   })
   
-  it('renders the biographical content', () => {
+  it('renders the section headings with proper styling', () => {
     render(<About />)
     
-    // Check for key phrases in the content
-    expect(screen.getByText(/Hello! I'm a Software Engineer/i)).toBeInTheDocument()
-    expect(screen.getByText(/full stack development/i)).toBeInTheDocument()
-    expect(screen.getByText(/Agile methodologies/i)).toBeInTheDocument()
-    expect(screen.getByText(/enhancing features/i)).toBeInTheDocument()
-    expect(screen.getByText(/free time/i)).toBeInTheDocument()
+    // Check the section headings in the grid
+    const skillsHeading = screen.getByText('Skills')
+    expect(skillsHeading).toHaveClass('text-2xl')
+    expect(skillsHeading).toHaveClass('font-bold')
+    expect(skillsHeading).toHaveClass('text-primary')
+    expect(skillsHeading).toHaveClass('mb-4')
+    
+    const experienceHeading = screen.getByText('Experience')
+    expect(experienceHeading).toHaveClass('text-2xl')
+    expect(experienceHeading).toHaveClass('font-bold')
+    expect(experienceHeading).toHaveClass('text-primary')
+    expect(experienceHeading).toHaveClass('mb-4')
+    
+    const educationHeading = screen.getByText('Education')
+    expect(educationHeading).toHaveClass('text-2xl')
+    expect(educationHeading).toHaveClass('font-bold')
+    expect(educationHeading).toHaveClass('text-primary')
+    expect(educationHeading).toHaveClass('mb-4')
   })
   
-  it('has the correct container styling', () => {
+  it('has the correct dark theme styling for containers', () => {
     render(<About />)
     
-    // Get the main container
-    const container = screen.getByText(/Hello! I'm a Software Engineer/i).closest('div')
-    expect(container).toHaveClass('mx-auto')
-    expect(container).toHaveClass('max-w-3xl')
-    expect(container).toHaveClass('p-8')
-    expect(container).toHaveClass('text-center')
+    // Get the main container elements with dark theme
+    const sections = document.querySelectorAll('.bg-dark-200.rounded-lg.p-6.border.border-dark-400')
+    expect(sections.length).toBeGreaterThanOrEqual(3)
+    
+    // Check the skill list items have the correct styling
+    const skillItems = screen.getAllByText(/^▹/, { exact: false })
+    skillItems.forEach(item => {
+      expect(item).toHaveClass('mr-2')
+      expect(item).toHaveClass('text-primary')
+    })
+    
+    // Check for text color classes
+    const paragraphs = document.querySelectorAll('p.text-light-100')
+    expect(paragraphs.length).toBeGreaterThan(0)
   })
 })

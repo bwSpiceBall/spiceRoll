@@ -3,16 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --primary: #4F46E5;
-  --primary-dark: #4338CA;
-  --secondary: #10B981;
-  --gray-light: #F4F5F6;
-  --gray-dark: #374151;
-  --text-primary: #1F2937;
+  --primary: #FF4D00;
+  --primary-dark: #E64500;
+  --secondary: #222222;
+  --background-dark: #000000;
+  --background-medium: #111111;
+  --background-light: #1A1A1A;
+  --text-primary: #FFFFFF;
+  --text-secondary: #B3B3B3;
+  --border-color: #333333;
 }
 
 body {
-  background: var(--gray-light);
+  background: var(--background-dark);
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--text-primary);
   line-height: 1.6;
@@ -29,17 +32,18 @@ body {
 
 /* Modern code styles */
 pre {
-  background-color: #f6f8fa;
+  background-color: var(--background-light);
   padding: 1em;
   border-radius: 8px;
   overflow-x: auto;
   text-align: left;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
   margin: 1rem 0;
 }
 
 code {
   font-family: 'SF Mono', 'Roboto Mono', 'Courier New', monospace;
+  color: var(--text-primary);
 }
 
 /* Better typography */
@@ -47,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   line-height: 1.25;
   margin-bottom: 0.5rem;
-  color: var(--primary-dark);
+  color: var(--text-primary);
 }
 
 h1 {
@@ -64,6 +68,7 @@ h3 {
 
 p {
   margin-bottom: 1rem;
+  color: var(--text-secondary);
 }
 
 /* Adjust padding for mobile */
@@ -90,11 +95,11 @@ a:focus, button:focus, input:focus, textarea:focus {
 }
 
 .blog-content img {
-  @apply max-w-full h-auto mx-auto my-4 rounded-lg;
+  @apply max-w-full h-auto mx-auto my-4 rounded-lg border border-gray-700;
 }
 
 .blog-content pre {
-  @apply overflow-x-auto my-4 text-sm md:text-base;
+  @apply overflow-x-auto my-4 text-sm md:text-base bg-gray-900 border border-gray-700;
 }
 
 .blog-content iframe {
@@ -102,9 +107,18 @@ a:focus, button:focus, input:focus, textarea:focus {
 }
 
 .blog-content table {
-  @apply w-full overflow-x-auto block md:table my-4 border-collapse;
+  @apply w-full overflow-x-auto block md:table my-4 border-collapse border border-gray-700;
 }
 
 .blog-content blockquote {
-  @apply border-l-4 border-gray-300 pl-4 italic my-4;
+  @apply border-l-4 border-gray-600 pl-4 italic my-4 text-gray-400;
+}
+
+/* Custom button styles */
+.btn-primary {
+  @apply bg-[#FF4D00] text-white px-4 py-2 rounded-md hover:bg-[#E64500] transition-colors;
+}
+
+.btn-secondary {
+  @apply bg-[#222222] text-white px-4 py-2 rounded-md border border-[#333333] hover:bg-[#333333] transition-colors;
 }

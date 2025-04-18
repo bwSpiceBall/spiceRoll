@@ -63,8 +63,8 @@ describe('BlogPost Component', () => {
       </QueryClientProvider>
     )
     
-    // Check for loading text
-    expect(screen.getByText('loading')).toBeInTheDocument()
+    // Check for loading text with proper capitalization
+    expect(screen.getByText('Loading...')).toBeInTheDocument()
   })
 
   it('renders blog post content after data is loaded', async () => {
