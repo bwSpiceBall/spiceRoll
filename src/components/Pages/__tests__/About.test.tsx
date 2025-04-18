@@ -32,11 +32,11 @@ describe('About Component', () => {
     expect(experienceHeading).toHaveClass('text-primary')
     expect(experienceHeading).toHaveClass('mb-4')
     
-    const projectsHeading = screen.getByText('Projects')
-    expect(projectsHeading).toHaveClass('text-2xl')
-    expect(projectsHeading).toHaveClass('font-bold')
-    expect(projectsHeading).toHaveClass('text-primary')
-    expect(projectsHeading).toHaveClass('mb-4')
+    const educationHeading = screen.getByText('Education')
+    expect(educationHeading).toHaveClass('text-2xl')
+    expect(educationHeading).toHaveClass('font-bold')
+    expect(educationHeading).toHaveClass('text-primary')
+    expect(educationHeading).toHaveClass('mb-4')
   })
   
   it('has the correct dark theme styling for containers', () => {
@@ -52,10 +52,6 @@ describe('About Component', () => {
       expect(item).toHaveClass('mr-2')
       expect(item).toHaveClass('text-primary')
     })
-    
-    // Check project cards have dark styling
-    const projectCards = document.querySelectorAll('.bg-dark-300.p-4.rounded-md')
-    expect(projectCards.length).toBeGreaterThanOrEqual(2)
     
     // Check for text color classes
     const paragraphs = document.querySelectorAll('p.text-light-100')

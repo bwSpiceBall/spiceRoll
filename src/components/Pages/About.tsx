@@ -5,68 +5,90 @@ const About = () => {
                 <h1 className="text-3xl font-bold text-light mb-6">About Me</h1>
                 <div className="space-y-4">
                     <p className="text-light-100">
-                        I&apos;m a software engineer with expertise in building modern, responsive web applications. 
-                        With over 8 years of experience in the field, I&aposve worked on a variety of projects 
-                        ranging from small business websites to complex enterprise applications.
+                        Hi, I&apos;m Tom Szpak, a software engineer based in the Bristol area. 
+                        I specialize in building modern, scalable web applications and have a strong 
+                        background in both frontend and backend development.
                     </p>
                     <p className="text-light-100">
-                        My approach to development focuses on creating clean, maintainable code that delivers 
-                        exceptional user experiences. I believe in the power of thorough testing, continuous 
-                        integration, and well-documented code to create software that stands the test of time.
+                        With a proactive approach to communication and a passion for clean, maintainable code, 
+                        I strive to deliver high-quality software solutions. I&aposm always eager to learn and 
+                        contribute to projects that make a meaningful impact.
                     </p>
                 </div>
             </div>
-            
+
+            <div className="border-t border-dark-400 my-6"></div>
+
             <div className="grid gap-8 md:grid-cols-2">
                 <div className="bg-dark-200 rounded-lg p-6 border border-dark-400">
                     <h2 className="text-2xl font-bold text-primary mb-4">Skills</h2>
                     <ul className="space-y-2 text-light-100">
                         <li className="flex items-center">
                             <span className="mr-2 text-primary">▹</span>
-                            Frontend: React, Vue, TypeScript, TailwindCSS
+                            JavaScript/TypeScript, Node.js, React, Git, Express.js
                         </li>
                         <li className="flex items-center">
                             <span className="mr-2 text-primary">▹</span>
-                            Backend: Node.js, Express, Django, Laravel
+                            PostgreSQL, Docker, GitHub Actions
                         </li>
                         <li className="flex items-center">
                             <span className="mr-2 text-primary">▹</span>
-                            Database: PostgreSQL, MongoDB, Redis
-                        </li>
-                        <li className="flex items-center">
-                            <span className="mr-2 text-primary">▹</span>
-                            DevOps: Docker, AWS, CI/CD, Kubernetes
+                            Proactive communication, Agile methodologies
                         </li>
                     </ul>
                 </div>
-                
+
                 <div className="bg-dark-200 rounded-lg p-6 border border-dark-400">
                     <h2 className="text-2xl font-bold text-primary mb-4">Experience</h2>
                     <div className="space-y-4">
                         <div>
-                            <h3 className="font-semibold text-light">Senior Software Engineer</h3>
-                            <p className="text-primary">Tech Innovations Inc.</p>
-                            <p className="text-sm text-light-100">2020 - Present</p>
+                            <h3 className="font-semibold text-light">Software Engineer</h3>
+                            <p className="text-primary">Brandwatch Ltd, Brighton/Remote</p>
+                            <p className="text-sm text-light-100">Jan 2021 - Present</p>
+                            <p className="text-light-100 text-sm">
+                                Developed and maintained features for internal admin apps and Node.js microservices. 
+                                Migrated REST APIs, optimized performance, and contributed to scalability planning.
+                            </p>
                         </div>
                         <div>
-                            <h3 className="font-semibold text-light">Software Developer</h3>
-                            <p className="text-primary">Digital Solutions LLC</p>
-                            <p className="text-sm text-light-100">2017 - 2020</p>
+                            <h3 className="font-semibold text-light">Technical Support Engineer</h3>
+                            <p className="text-primary">Brandwatch Ltd, Brighton/Remote</p>
+                            <p className="text-sm text-light-100">April 2018 - Jan 2021</p>
+                            <p className="text-light-100 text-sm">
+                                Provided second-line support, resolved technical issues, and contributed to the 
+                                development of an internal admin platform.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 className="font-semibold text-light">Data Analyst</h3>
+                            <p className="text-primary">Leidos Europe, Bristol</p>
+                            <p className="text-sm text-light-100">Oct 2017 - Jan 2018</p>
+                            <p className="text-light-100 text-sm">
+                                Analyzed data for secure delivery systems, leveraging analytical skills and BPSS clearance.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
+            <div className="border-t border-dark-400 my-6"></div>
+
             <div className="bg-dark-200 rounded-lg p-6 border border-dark-400">
-                <h2 className="text-2xl font-bold text-primary mb-4">Projects</h2>
-                <div className="grid gap-4 md:grid-cols-2">
-                    <div className="bg-dark-300 p-4 rounded-md">
-                        <h3 className="font-semibold text-light">E-commerce Platform</h3>
-                        <p className="text-sm text-light-100">Full-stack React/Node.js application with integrated payment processing</p>
+                <h2 className="text-2xl font-bold text-primary mb-4">Education</h2>
+                <div className="space-y-4">
+                    <div>
+                        <h3 className="font-semibold text-light">Cardiff Metropolitan University</h3>
+                        <p className="text-primary">BSc Computing, Computer and Data Science</p>
+                        <p className="text-sm text-light-100">2015 - 2017</p>
                     </div>
-                    <div className="bg-dark-300 p-4 rounded-md">
-                        <h3 className="font-semibold text-light">Health Analytics Dashboard</h3>
-                        <p className="text-sm text-light-100">Data visualization platform using D3.js with real-time updates</p>
+                    <div>
+                        <h3 className="font-semibold text-light">Fontys University of Applied Sciences</h3>
+                        <p className="text-primary">Erasmus - ML/Big Data Analysis</p>
+                        <p className="text-sm text-light-100">2016 - 2017</p>
+                        <p className="text-light-100 text-sm">
+                            Focused on Machine Learning, Data Visualization (D3.js, Tableau), and data processing 
+                            using Python, Pandas, and NumPy.
+                        </p>
                     </div>
                 </div>
             </div>
