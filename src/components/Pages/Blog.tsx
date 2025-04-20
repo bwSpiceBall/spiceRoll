@@ -50,7 +50,12 @@ const Blog = () => {
         queryKey: [`${import.meta.env.VITE_CMS_URL}/api/posts`],
         queryFn: async () => {
             const response = await fetch(
-                `${import.meta.env.VITE_CMS_URL}/api/posts`
+                `${import.meta.env.VITE_CMS_URL}/api/posts/?populate=image&populate=secondary_image&fields=title,description`,
+                {
+                    headers: {
+                        Authorization: `Bearer: ${import.meta.env.VITE_CMS_TOKEN}`,
+                    }
+                }
             )
             return await response.json()
         },
