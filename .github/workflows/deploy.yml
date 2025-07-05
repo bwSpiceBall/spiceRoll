@@ -32,7 +32,8 @@ jobs:
             VITE_CMS_URL=${{ secrets.VITE_CMS_URL }}
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/spiceroll:latest
       
-      - name: Deploy with Docker Compose
+      - name: Deploy to k3s
         run: | 
-            docker compose -f /home/pc/docker/spiceRoll/docker-compose.yml pull
-            docker compose -f /home/pc/docker/spiceRoll/docker-compose.yml up -d
+          kubectl rollout restart deployment/spiceroll -n default
+          echo "Waiting for deployment to complete..."
+          kubectl rollout status deployment/spiceroll -n default --timeout=300s
