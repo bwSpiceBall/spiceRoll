@@ -1,0 +1,19 @@
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/
+Disallow: /xmlrpc.php
+Disallow: /.env
+Disallow: /.env-save
+Disallow: /.git/
+Disallow: /config/
+Disallow: /api/
+
+# Allow legitimate crawlers to access the site content
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
