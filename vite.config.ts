@@ -11,6 +11,13 @@ export default defineConfig({
         'import.meta.env.VITE_CMS_TOKEN': JSON.stringify(process.env.VITE_CMS_TOKEN),
         'import.meta.env.VITE_CMS_URL': JSON.stringify(process.env.VITE_CMS_URL),
     },
+    build: {
+        rollupOptions: {
+            input: {
+                app: './index.html',
+            },
+        },
+    },
     preview: {
         port: 8080,
         strictPort: true
